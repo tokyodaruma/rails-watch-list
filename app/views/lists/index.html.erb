@@ -1,5 +1,16 @@
-<h1>My Lists</h1>
-<% @lists.each do |list| %>
-  <%= link_to list.name, list_path(list) %>
-<% end %>
-<%= link_to 'Create a movie list', new_list_path %>
+<div class="container">
+  <h1>My Lists</h1>
+    <div class="row">
+      <% @lists.each do |list| %>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <%= cl_image_tag list.photo.key %>
+            <div class="card-body">
+              <%= link_to list.name, list_path(list), class:"btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <%= link_to 'Create a movie list', new_list_path %>
+</div>

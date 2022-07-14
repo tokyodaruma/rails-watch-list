@@ -1,0 +1,8 @@
+<div class="col">
+  <div class="card bg-dark text-white">
+    <%= cl_image_tag list.photo.key, class:"card-img"%>
+    <div class="card-img-overlay" style="width: 18rem;">
+      <%= link_to list.name, list_path(list), class:"card-title btn btn-primary" %>
+    </div>
+  </div>
+</div>

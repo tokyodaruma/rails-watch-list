@@ -8,7 +8,17 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Typed from 'typed.js';
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+AOS.init();
+
+const typed = new Typed('.element', {
+  strings: ["Sunset Films.", "Listing Your Favorite Films."],
+  typeSpeed: 30
+});

@@ -13,4 +13,16 @@
 
 body {
   background-color: #B02360;
+
+  h1 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    height: 200px;
+    width: 600px;
+    display: flex;
+    margin-left: 35%;
+    margin-top: 15%;
+  }
 }

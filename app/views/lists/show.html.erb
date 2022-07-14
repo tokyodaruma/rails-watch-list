@@ -1,6 +1,11 @@
-<% @bookmarks.each do |bookmark| %>
-  <%= render 'shared/showcard', bookmark: bookmark %>
-<% end %>
-
-<%= link_to 'Create new movie', new_list_bookmark_path(@list) %>
-<%= link_to 'Back to the top', lists_path %>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <% @bookmarks.each do |bookmark| %>
+      <%= render 'shared/showcard', bookmark: bookmark %>
+    <% end %>
+  </div>
+  <div class="d-flex justify-content-end mt-5">
+    <%= link_to 'Create new movie', new_list_bookmark_path(@list), class:"btn btn-primary me-2" %>
+    <%= link_to 'Back to the top', lists_path, class:'flex-shrink-1 btn btn-primary' %>
+  </div>
+</div>
